@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deforestation Awareness & Tree Conservation</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f9f4;
+      color:#222;
+      line-height:1.7;
+    }
+
+    header{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:60px;
+      margin-bottom:20px;
+      letter-spacing:1px;
+    }
+
+    .hero-content p{
+      max-width:800px;
+      margin:auto;
+      font-size:20px;
+    }
+
+    nav{
+      background:#1b5e20;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 18px;
+      font-size:17px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#c8e6c9;
+    }
+
+    section{
+      padding:70px 20px;
+      max-width:1150px;
+      margin:auto;
+    }
+
+    section h2{
+      text-align:center;
+      color:#1b5e20;
+      margin-bottom:25px;
+      font-size:38px;
+    }
+
+    section p{
+      text-align:justify;
+      font-size:17px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:14px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card h3{
+      color:#1b5e20;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .statistics{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .stat-box{
+      background:#c8e6c9;
+      padding:35px;
+      width:260px;
+      border-radius:14px;
+      text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .stat-box h3{
+      color:#1b5e20;
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .flow-section{
+      background:white;
+      padding:35px;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      margin-top:40px;
+    }
+
+    .flow-step{
+      text-align:center;
+      padding:15px;
+      background:#e8f5e9;
+      margin:12px auto;
+      width:70%;
+      border-radius:10px;
+      font-weight:bold;
+      color:#1b5e20;
+      font-size:18px;
+    }
+
+    .arrow{
+      text-align:center;
+      font-size:28px;
+      color:#1b5e20;
+      font-weight:bold;
+    }
+
+    .quote{
+      margin-top:40px;
+      text-align:center;
+      font-style:italic;
+      color:#2e7d32;
+      font-size:24px;
+      padding:20px;
+    }
+
+    .cta{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+      border-radius:18px;
+      margin-top:50px;
+    }
+
+    .cta h2{
+      color:white;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+      font-size:18px;
+    }
+
+    .cta-button{
+      display:inline-block;
+      margin-top:30px;
+      padding:14px 30px;
+      background:#66bb6a;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-size:18px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .cta-button:hover{
+      background:#43a047;
+    }
+
+    footer{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+      font-size:16px;
+    }
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:38px;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px;
+      }
+
+      section h2{
+        font-size:30px;
+      }
+
+      .flow-step{
+        width:100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="hero-content">
+
+      <h1>Save Forests, Save Future</h1>
+
+      <p>
+        Deforestation is one of the biggest environmental challenges affecting
+        climate balance, wildlife, biodiversity, and human survival.
+        Tree conservation and environmental awareness are essential
+        for creating a greener and healthier future.
+      </p>
+
+    </div>
+
+  </header>
+
+  <nav>
+
+    <a href="#about">About</a>
+    <a href="#causes">Causes</a>
+    <a href="#effects">Effects</a>
+    <a href="#statistics">Statistics</a>
+    <a href="#flowchart">Flowchart</a>
+    <a href="#solutions">Solutions</a>
+
+  </nav>
+
+  <section id="about">
+
+    <h2>About Deforestation</h2>
+
+    <p>
+      Deforestation refers to the large-scale cutting and removal of forests
+      and trees for human activities such as urbanization, industrialization,
+      agriculture, construction, and commercial development. Forests are
+      important natural resources that help maintain ecological balance,
+      regulate climate, prevent soil erosion, conserve biodiversity,
+      and provide oxygen necessary for life.
+    </p>
+
+    <br>
+
+    <p>
+      Increasing deforestation has created serious environmental problems
+      including climate change, global warming, pollution, loss of wildlife
+      habitats, and irregular rainfall patterns. Therefore, spreading
+      awareness regarding tree conservation and environmental protection
+      has become extremely important in modern society.
+    </p>
+
+  </section>
+
+  <section id="causes">
+
+    <h2>Main Causes of Deforestation</h2>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h3>Urbanization</h3>
+
+        <p>
+          Expansion of roads, buildings, and cities causes large-scale
+          cutting of trees and destruction of forests.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Industrialization</h3>
+
+        <p>
+          Industries require land and wood resources, resulting in
+          environmental degradation and forest destruction.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Agricultural Expansion</h3>
+
+        <p>
+          Forest areas are cleared to create farmland and grazing areas
+          for agricultural activities.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Excessive Wood Usage</h3>
+
+        <p>
+          Trees are continuously cut for furniture, paper production,
+          fuel, and construction materials.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="effects">
+
+    <h2>Effects of Deforestation</h2>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h3>Global Warming</h3>
+
+        <p>
+          Fewer trees increase carbon dioxide levels in the atmosphere,
+          resulting in rising global temperatures.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Climate Change</h3>
+
+        <p>
+          Deforestation disturbs rainfall patterns and creates
+          environmental imbalance worldwide.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Loss of Wildlife</h3>
+
+        <p>
+          Animals lose their natural habitat and biodiversity decreases
+          rapidly due to forest destruction.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Soil Erosion</h3>
+
+        <p>
+          Trees help hold soil together. Without forests, land becomes
+          weak and vulnerable to erosion.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="statistics">
+
+    <h2>Environmental Statistics</h2>
+
+    <div class="statistics">
+
+      <div class="stat-box">
+
+        <h3>10M+</h3>
+
+        <p>
+          Hectares of forest lost every year globally.
+        </p>
+
+      </div>
+
+      <div class="stat-box">
+
+        <h3>80%</h3>
+
+        <p>
+          Wildlife species depend on forests for survival.
+        </p>
+
+      </div>
+
+      <div class="stat-box">
+
+        <h3>15%</h3>
+
+        <p>
+          Global greenhouse gas emissions are linked to deforestation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="flowchart">
+
+    <h2>Environmental Awareness Flowchart</h2>
+
+    <div class="flow-section">
+
+      <div class="flow-step">Student Participation</div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-step">Awareness Discussion</div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-step">Community Interaction</div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-step">Environmental Education</div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-step">Tree Plantation Activity</div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-step">Tree Conservation Awareness</div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-step">Public Participation</div>
+
+      <div class="arrow">↓</div>
+
+      <div class="flow-step">Environmental Responsibility</div>
+
+    </div>
+
+  </section>
+
+  <section id="solutions">
+
+    <h2>Solutions for Environmental Protection</h2>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h3>Plant More Trees</h3>
+
+        <p>
+          Plantation activities can restore greenery and improve
+          environmental balance.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Reduce Paper Waste</h3>
+
+        <p>
+          Reusing and recycling paper products can help reduce
+          unnecessary tree cutting.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Spread Awareness</h3>
+
+        <p>
+          Awareness campaigns and educational activities encourage
+          environmental responsibility.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Support Sustainable Development</h3>
+
+        <p>
+          Development activities should balance modernization with
+          environmental protection.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="quote">
+
+      “Save Trees Today for a Better Tomorrow.”
+
+    </div>
+
+  </section>
+
+  <section class="cta">
+
+    <h2>Take Action Today</h2>
+
+    <p>
+      Every individual can contribute toward protecting forests and
+      creating a sustainable future through awareness, plantation,
+      and environmental responsibility.
+    </p>
+
+    <a href="#" class="cta-button">Join the Green Mission</a>
+
+  </section>
+
+  <footer>
+
+    <p>
+      © 2026 Deforestation Awareness & Tree Conservation |
+      Educational Project Website
+    </p>
+
+  </footer>
+
+</body>
+</html>
